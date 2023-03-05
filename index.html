@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .box-con {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        padding: 20px;
+      }
+      .algo-box {
+        padding: 20px;
+        box-shadow: 0px 0px 2px #ddd;
+      }
+
+      button {
+        all: unset;
+        height: 40px;
+        padding: 0px 14px;
+        background-color: blueviolet;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.33s;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      .action {
+        margin-top: 30px;
+      }
+
+      .result {
+        height: 90px;
+        padding: 20px 10px;
+        background-color: rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: end;
+      }
+
+      .result .bar {
+        background: grey;
+        text-align: center;
+        margin-bottom: 0px;
+        transition: all 0.5s ease;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-weight: 800;
+        width: 60px;
+      }
+
+      .header {
+        padding: 10px;
+      }
+
+      .header h1 {
+      }
+      @media (max-width: 640px) {
+        .box-con {
+          padding: 10px;
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
+        }
+        .algo-box {
+          padding: 10px;
+        }
+
+        .result .action {
+          color: col;
+        }
+        .result {
+          padding: 10px 10px;
+        }
+        .result .bar {
+          width: 30px !important;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Algorithanimate</h1>
+    </div>
+    <div class="wrapper">
+      <div class="box-con">
+        <div class="algo-box">
+          <h1>Insert sort</h1>
+          <div class="result"></div>
+
+          <div class="action">
+            <button class="reset-action">Reset</button>
+            <button class="sort-action">Sort</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
